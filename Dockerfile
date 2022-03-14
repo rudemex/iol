@@ -16,12 +16,13 @@ WORKDIR /usr/src/app
 
 COPY package.json ./
 
-RUN npm install
+RUN yarn install
 
 COPY . .
 
-RUN npm run build
-RUN npm prune --production
+RUN yarn build
+#RUN npm run build
+#RUN npm prune --production
 
 # ---
 
